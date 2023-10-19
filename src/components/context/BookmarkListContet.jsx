@@ -18,7 +18,20 @@ const BookmarkListProvider = ({ children }) => {
     try {
       const { data } = await axios.get(`${BASE_URL}/bookmarks/${id}`);
       setCurrentBookmark(data);
-      isLoadingCurrentBookmark(false);
+      setIsLoadingCurrentBookmark(false);
+    } catch (error) {
+      toast.error(error.message);
+      setIsLoadingCurrentBookmark(false);
+    }
+  }
+
+  async function createBookmark(newBookmark) {
+    setIsLoadingCurrentBookmark(true);
+
+    try {
+      const { data } = await axios.post(`${BASE_URL}/bookmarks/`, newBookmark);
+      setCurrentBookmark(data);
+      setIsLoadingCurrentBookmark(false);
     } catch (error) {
       toast.error(error.message);
       setIsLoadingCurrentBookmark(false);
@@ -33,6 +46,7 @@ const BookmarkListProvider = ({ children }) => {
         bookmarks,
         isLoadingCurrentBookmark,
         currentBookmark,
+        createBookmark,
       }}
     >
       {children}

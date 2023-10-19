@@ -11,7 +11,7 @@ import BookmarkLayout from "./components/bookmarkLayout/BookmarkLayout";
 import BookmarkListProvider from "./components/context/BookmarkListContet";
 import Bookmark from "./components/bookmark/Bookmark";
 import SingleBookmark from "./components/singleBookmark/SingleBookmark";
-import AddNewBookmark from "./components/addnewBookmark/AddNewBookmark";
+import AddNewBookmark from "./components/addnewBookmark/AddnewBookmark";
 
 function App() {
   return (

@@ -1368,6 +1368,15 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "A Dakhla Oasis",
+      "country": "Egypt",
+      "countryCode": "EG",
+      "latitude": "25.01575740653449",
+      "longitude": "29.09789085388184",
+      "host_location": "A Dakhla Oasis Egypt",
+      "id": 9
     }
   ]
 }
