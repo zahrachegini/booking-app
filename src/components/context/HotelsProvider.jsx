@@ -8,7 +8,7 @@ const HotelContext = createContext();
 const BASE_URL = "http://localhost:5000/hotels";
 
 const HotelsProvider = ({ children }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const destination = searchParams.get("destination");
   const [currentHotel, setCurrentHotel] = useState(null);
   const [isLoadingCurrentHotel, setIsLoadingCurrentHotel] = useState(false);
@@ -17,7 +17,7 @@ const HotelsProvider = ({ children }) => {
     BASE_URL,
     `q=${destination || ""}&accommodates_get=${room || 1}`
   );
-
+ 
   async function getHotel(id) {
     setIsLoadingCurrentHotel(true);
     try {
